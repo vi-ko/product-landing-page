@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<style>
+	.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 30px;
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+img {
+  height: 100vh;
+  width: 100%;
+  object-fit: contain;
+}
+body {
+	background: powderblue;
+}
+.title {
+	font-size: 50px;
+	font-family: verdana;
+	font-weight: bold;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+
+</style>
+<body>
+	<main>
+		<section>
+			<header id="header">
+				<nav id="nav-bar">
+					<div class="container">
+						<img id="header-img" src="pexels-photo-3798396.jpeg" alt="cherryblossomtree" style="width:100%">
+						<div class="centered"><div class="title">Yoga Mat Cleaning Spray</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt lectus erat, eget fermentum ex placerat et. Mauris sapien purus, eleifend nec eleifend nec, faucibus a sapien. Sed hendrerit vel sapien nec malesuada. Phasellus quis mollis sem. Praesent et risus dictum, fermentum leo eu, aliquet leo. Sed commodo, metus in fermentum pretium, enim urna ultrices lectus, a porttitor dolor urna quis urna. Sed nec neque dui. Aliquam porttitor nisi nec porta volutpat.</div>
+					</div>	
+				</nav>
+			</header>
+		</section>
+		<section>
+			<!-- Tab links -->
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+</div>
+
+<!-- Tab content -->
+<div id="London" class="tabcontent">
+  <h3>London</h3>
+  <p>London is the capital city of England.</p>
+</div>
+
+<div id="Paris" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div id="Tokyo" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+		</section>
+
+
+
+	</main>
+</body>
+<script type="text/javascript">function openCity(evt, cityName) {
+  // Declare all variables
+  var i, tabcontent, tablinks;
+
+  // Get all elements with class="tabcontent" and hide them
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Get all elements with class="tablinks" and remove the class "active"
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the current tab, and add an "active" class to the button that opened the tab
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}</script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
