@@ -1,1 +1,3 @@
 # product-landing-page
+Hi Fellow Humans!
+Vi-ko's here, just trying to learn about GIT....
