@@ -1,28 +1,78 @@
 <!DOCTYPE html>
 <html lang="en-US">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden auto;
+}
 	.container {
   position: relative;
   text-align: center;
   color: white;
-  font-size: 30px;
+  font-size: 10px;
 }
 .centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  font-size: 12px;
+  width: 100%;
 }
 img {
-  height: 100vh;
+  height: auto;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  margin-top: 10px;
+
 }
 body {
+	margin: 40px 0;
 	background: powderblue;
+  font-family: Arial, Helvetica, sans-serif;
 }
+.section3 {
+	padding-top: 20px;
+  text-align: center;
+}
+
+.flex-container{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	height: 50px;
+	align-items: center;
+	align-content: center;
+	background-color: #bf8ea4;
+	padding: 20px;
+	color: white;
+}
+#nav-bar {
+    position: fixed;
+    top: 0;
+    z-index: 80;
+    background-color: #bf8ea4;
+    width: 100%;
+    min-height: 50px;
+    text-align: right;
+    font-family: verdana;
+    font-size: smaller;
+    font-style: oblique;
+    font-weight: bold;
+    padding-top: 10px;
+}
+.nav-link {
+	color: white;
+	margin-right: 20px;
+	
+}
+
 .title {
-	font-size: 50px;
+	font-size: 16px;
 	font-family: verdana;
 	font-weight: bold;
 }
@@ -30,19 +80,22 @@ body {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
+  border: 6px solid #ccc;
   background-color: #f1f1f1;
+  text-align: center;
+
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
   background-color: inherit;
-  float: left;
+  float: center;
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 14px 16px;
+  padding: 12px 16px;
   transition: 0.3s;
+
 }
 
 /* Change background color of buttons on hover */
@@ -53,15 +106,125 @@ body {
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
+
 }
 
 /* Style the tab content */
 .tabcontent {
   display: none;
   padding: 6px 12px;
-  border: 1px solid #ccc;
+  
   border-top: none;
 }
+.howto {
+		font-style: italic;
+    margin: 15px;
+	}
+
+* {
+  box-sizing: border-box;
+  
+}
+
+/* Float four columns side by side */
+
+.column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+  
+/*larger letters on pic */
+@media (min-width: 400px) {
+  .centered {
+    font-size: 17px;
+    width: 70%; 
+  }
+  #shipping {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 40px;
+  }
+  #money {
+    max-width: 800px;
+    margin: auto;
+    padding-top: 20px;
+  }
+}
+
+
+
+/*sorting out stripes */  
+@media (min-width: 575px) {
+  .tab {
+    width: 500px;
+    margin: auto;
+  }
+  .row {
+    width: 500px;
+    margin: auto;
+   }
+  }
+
+
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (min-width: 600px) {
+  .column {
+    float: center;
+    width: 100%;
+    padding: 20 10px;
+  }
+  .centered {
+    font-size: 25px;
+    width: 70%; 
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 900px) {
+  #na {
+    max-width: 800px;
+    margin: auto   }
+  .tab {
+    width: 800px;
+    margin: auto;
+  }
+  #video {
+    max-width: 800px;
+  }
+  #Howtouseit {
+    max-width: 800px;
+    margin: auto;
+  }
+  .tabcontent {
+    max-width: 800px;
+    margin: auto;
+  }
+}
+
+
 
 
 </style>
@@ -70,41 +233,126 @@ body {
 		<section>
 			<header id="header">
 				<nav id="nav-bar">
-					<div class="container">
-						<img id="header-img" src="pexels-photo-3798396.jpeg" alt="cherryblossomtree" style="width:100%">
-						<div class="centered"><div class="title">Yoga Mat Cleaning Spray</div><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt lectus erat, eget fermentum ex placerat et. Mauris sapien purus, eleifend nec eleifend nec, faucibus a sapien. Sed hendrerit vel sapien nec malesuada. Phasellus quis mollis sem. Praesent et risus dictum, fermentum leo eu, aliquet leo. Sed commodo, metus in fermentum pretium, enim urna ultrices lectus, a porttitor dolor urna quis urna. Sed nec neque dui. Aliquam porttitor nisi nec porta volutpat.</div>
-					</div>	
+
+					<a class="nav-link" href="#email-label">Order</a>
+					<a class="nav-link" href="#shipping">Shipping</a>
+					<a class="nav-link" href="#money">Garantinee</a>
 				</nav>
+				<div class="container">
+					<img id="header-img" src="https://i.imgur.com/5UJITEW.jpg" alt="cherryblossomtree" style="width:100%">
+					<div class="centered">
+						<div class="title">Dolor Yoga Mat Cleaning Spray</div>
+						<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam tincidunt lectus erat, eget fermentum ex placerat et. Mauris sapien purus, eleifend nec eleifend nec, faucibus a sapien.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					</div>
+				</div>
 			</header>
 		</section>
 		<section>
 			<!-- Tab links -->
 <div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">London</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
-</div>
+  <button class="tablinks" onclick="openCity(event, 'Ingredients')">Ingredients</button>
+  <button class="tablinks" onclick="openCity(event, 'Howtouseit')">How to use it</button>
+  <button class="tablinks" onclick="openCity(event, 'Gallery')">Gallery</button>
+</div><br><br>
 
 <!-- Tab content -->
-<div id="London" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+<div id="Ingredients" class="tabcontent">
+  <h3>Ingredients</h3>
+  <p class="howto">Main ingredients:</p>
+  <div>
+  	<select id="dropdown1" name="ingredients1">
+  	<option value="Chamomile">Chamomile</option>
+  	<option value="Lavender">Lavender</option>
+  	<option value="Grapefruit">Grapefruit</option>
+  	<option value="Mentha">Mentha</option>
+  	<option value="Cinnamon">Cinnamon</option>
+		</select>
+  </div>
+  <p class="howto">Special ingredients:</p>
+  <div>
+  	<select id="dropdown2" name="ingredients2">
+	  	<option value="Hyssop">Hyssop</option>
+	  	<option value="Ylang ylang">Ylang ylang</option>
+	  	<option value="Myrrh">Myrrh</option>
+	  	<option value="vetiver">Vetiver</option>
+	  	<option value="Sweet orange">Sweet orange</option>
+	  	<option value="Sage">Sage</option>
+	  	<option value="Rosemary">Rosemary</option>
+	  	<option value="Lemon">Lemon</option>
+  	</select>
+  <p>All of our product are vinegar based made with organic essential oils<br>The solution is antibacterial and antifungal<br>The bottle and the solution both biodegradable Lorem ipsum dolor sit amet, ullamcorper quisque pellentesque donec mauris ac. Semper interdum id consequat nullam quis at, phasellus vestibulum vulputate non lacus, aliquam vestibulum pede, accumsan praesent sit non suscipit, mauris eu in sit urna. Ultrices lobortis vehicula in, dis aliquam. Felis cras lorem quam commodo aliquet, orci donec in donec nisl, aliquam dignissim elit imperdiet nunc, lobortis nisl elit ultricies</p>
+  </div>
+  
+</div>
+<div id="Howtouseit" class="tabcontent">
+  <h3>How to use it</h3>
+  <p class="howto">Daily Cleaning:</p>
+  <p> After your practice, spray Dolor Yoga Mat Spray onto the mat surface and wipe down mat with a damp cloth. Air dry before rolling or using.</p>
+  <p class="howto">Deep Cleaning:</p>
+  <p> Liberally spray Dolor Yoga Mat Spray directly onto the surface of the mat and soak for 5 minutes. Using a damp cloth, scrub the surface to remove dirt and stains. Wipe mat down with a clean cloth and air dry before rolling or using. </p>
+  <div>
+  	<iframe id="video" width="100%" height="315" style="border:none"
+		src="https://www.youtube.com/embed/I-qUd2qQDMc">
+		</iframe>
+  </div>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p>
-</div>
-
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="Gallery" class="tabcontent">
+  <h3>Gallery</h3>
+  <div>
+  	<img src="fitness-grind-yoga-mats.jpg" alt="yoga mats"></img>
+  	<img src="BWP_6479.jpg" alt="spray bottles with scented plants"></img>
+  </div>
 </div>
 		</section>
 
+<section>
+
+		<div class="row">
+			<div class="column">
+				<div class="card">BASIC</div>
+				</div>
+	  	<div class="column">
+	    	<div class="card">BASIC+</div>
+	  		</div>
+	  	<div class="column">
+	    	<div class="card">PERSONAL</div>
+	  		</div>
+		</div>
+</section>
+<div id="na">
+		
+		<div class="flex-container">
+  <div>GoodVibe</div>
+  <div>Detox</div>
+  <div>MeTime</div>
+</div>
+	</div>
+	
 
 
-	</main>
+<section>
+	<form id="form" action="https://www.freecodecamp.com/email-submit">
+		<div class="section3">
+			<label id="email-label" for="email">Register/Sign in to order</label><br>
+				<input type="email" id="email" name="email" placeholder="jondoe1@mail.com"required style="margin: 0.5em"><br>
+				<input type="submit" id="submit" value="Submit">
+		</div>
+	</form>
+	<div>
+		<p id="shipping" class="howto">Fast Shipping<br>We make sure you recieve your Dolor Yoga Mat Spray as soon as we have finished making it.Lorem ipsum dolor sit amet, ullamcorper quisque pellentesque donec mauris ac. Semper interdum id 
+	</div>
+	<div>
+		<p id="money" class="howto">Money Garantee<br>We provide free returns if you are not satisfied.Lorem ipsum dolor sit amet, ullamcorper quisque pellentesque donec mauris ac. Semper interdum id consequat nullam quis at, phasellus vestibulum vulputate non lacus, aliquam vestibulum pede, accumsan praesent sit non suscipit, mauris eu in sit urna. Ultrices lobortis vehicula in, dis aliquam. </p>
+	</div>
+
+
+	
+</section>
+
+
+
+</main>
 </body>
 <script type="text/javascript">function openCity(evt, cityName) {
   // Declare all variables
